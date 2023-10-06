@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_24dp">
+
+        <com.mbanking.cubc.common.component.textinput.KHTextInputLoginComponent
+            android:id="@+id/edit_login_account"
+            style="@style/LoginInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:hint="@string/login_page_username"
+            app:defaultVisible="true"
+            app:maxLengthNum="@integer/login_user_name_length" />
+
+        <com.mbanking.cubc.common.component.textinput.KHTextInputLoginComponent
+            android:id="@+id/edit_login_mima"
+            style="@style/LoginInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:hint="@string/login_page_password"
+            app:maxLengthNum="60" />
+
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switch_remember_me"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:checked="true"
+            android:text="@string/login_page_remember_username"
+            android:textSize="@dimen/dimen_16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_login"
+            style="@style/KHCTAStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_24dp"
+            android:minHeight="@dimen/dimen_56dp"
+            android:text="@string/all_button_login"
+            app:cornerRadius="@dimen/dimen_21dp" />
+
+
+        <TextView
+            android:id="@+id/btn_login_forgetPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:gravity="center"
+            android:padding="@dimen/dimen_4dp"
+            android:text="@string/login_page_forgot_password"
+            android:textColor="@color/gray_main"
+            android:textSize="@dimen/text_size_16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/text_pw"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/text_pw" />
+
+        <ImageView
+            android:id="@+id/img_face"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="@dimen/dimen_16dp"
+            android:src="@drawable/ic_cubc_face_id_72"
+            android:visibility="gone"
+            app:tint="@color/gray_title" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
